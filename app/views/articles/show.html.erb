@@ -1,6 +1,7 @@
-<h3><%= @article.title %></h3>
-<p><%= @article.content %></p>
+<h2><%= @article.title %></h2>
+<p><%= raw @article.content %></p>
 
-<p><%= link_to "edit", edit_article_path %></p>
-<p><%= link_to "delete", article_path(@article), method: :delete %></p>
+
+<%= link_to "edit", edit_article_path %>
+<%= link_to "delete", article_path(@article), method: :delete %>
 

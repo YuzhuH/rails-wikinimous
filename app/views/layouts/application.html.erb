@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RailsWikinimous</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>RailsWikinimous</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+  <ul id="navigation">
+    <li><a href="/articles">Wikinimous</a></li>
+    <li><a href="/articles/new">New article</a></li>
+  </ul>
+  <%= yield %>
+</body>
 </html>

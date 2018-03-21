@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(params_article)
+    @article.content = Kramdown::Document.new(@article.content).to_html
     @article.save
     redirect_to article_path(@article)
   end
